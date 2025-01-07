@@ -555,7 +555,6 @@ exitButton.addEventListener('click', () => {
     historyScreen.style.display = "none";
 });
 
-
 document.addEventListener('keydown', (e) => {
     if (!board.gameOver && board.isPlaying) {
         
@@ -576,4 +575,21 @@ document.addEventListener('keydown', (e) => {
                 break;
         }
     }
+});
+
+const upButton = document.getElementById('up-btn');
+upButton.addEventListener('click', () => {
+    brick.rotate();
+});
+const downButton = document.getElementById('down-btn');
+downButton.addEventListener('click', () => {
+    brick.moveDown();
+});
+const leftButton = document.getElementById('left-btn');
+leftButton.addEventListener('click', () => {
+    brick.moveLeft();
+});
+const rightButton = document.getElementById('right-btn');
+rightButton.addEventListener('click', () => {
+    brick.moveRight();
 });

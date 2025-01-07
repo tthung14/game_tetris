@@ -4,14 +4,14 @@
 
 body {
     background-color: #e6e6e6;
+    margin: 0;
 }
 
 .container {
     display: grid;
     grid-template-columns: 320px 200px;
     justify-content: center;
-    margin-top: 100px;
-
+    margin-top: 80px;
     position: relative;
 }
 
@@ -44,8 +44,11 @@ body {
 }
 
 #score-history-btn {
-    margin-bottom: 250px;
-    
+    margin-bottom: 40%;
+}
+
+#button-move {
+    display: none;
 }
 
 /* css man hinh game over */
@@ -95,6 +98,7 @@ body {
     width: 350px;
     height: 40px;
     border-radius: 10px;
+    padding-left: 20px;
     margin-bottom: 30px;
 }
 #save-btn {
@@ -130,4 +134,120 @@ body {
 
 #history-screen #button #exit-btn{
     margin: 20px auto;
+}
+
+/* Mobile & table: width < 1024px */
+@media only screen and (max-width: 63.9375em) {
+    
+}
+
+/* Mobile: width < 740px */
+@media only screen and (max-width: 46.1875em) {
+    .container {
+       width: 100%;
+       grid-template-columns: 200px 150px;
+    }
+    .side-bar h1 {
+        font-size: 20px;
+    }
+    .side-bar {
+        padding-left: 5px;
+        width: 150px;
+    }
+    #board {
+        width: 200px;
+    }
+    .play-btn {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+    .play-btn {
+        font-size: 10px;
+        padding: 5px 10px;
+    }
+
+    .container-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px 0 0 0;
+        padding: 0;
+    }
+    .button-footer {
+        display: grid;
+        grid-template-columns: 50px 50px 50px; /* 3 cột */
+        grid-template-rows: 50px 50px 50px; /* 3 hàng */
+        justify-items: center;
+        align-items: center;
+    }
+    .play-btn-move {
+        width: 40px;
+        height: 40px;
+        font-size: 15px;
+        text-align: center;
+        background-color: greenyellow;
+        border: 2px solid black;
+        border-radius: 5px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #up-btn {
+        grid-column: 2; /* Đặt ở cột giữa hàng trên */
+        grid-row: 1;
+    }
+    #left-btn {
+        grid-column: 1; /* Đặt ở cột đầu hàng giữa */
+        grid-row: 2;
+    }
+    #down-btn {
+        grid-column: 2; /* Đặt ở cột giữa hàng dưới */
+        grid-row: 3;
+    }
+    #right-btn {
+        grid-column: 3; /* Đặt ở cột cuối hàng giữa */
+        grid-row: 2;
+    }
+    #button-move {
+        display: flex;
+    }
+    
+    .game-over-screen h2 {
+        font-size: 20px
+    }
+    .game-over-screen p {
+        font-size: 16px;
+    }
+    .game-over-screen button {
+        background-color: greenyellow;
+        font-size: 20px;
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+    #name-text {
+        height: 25px;
+        margin-bottom: 10px;
+    }
+    #button {
+        display: flex;
+    }
+    #name {
+        width: 300px;
+        font-size: 11px;
+    }
+    #save-btn {
+        width: 150px;
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    #restart-btn {
+        width: 150px;
+        font-size: 16px;
+    }
+}
+
+/* Tablet: width >= 740px and width < 1024px */
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+    
 }
